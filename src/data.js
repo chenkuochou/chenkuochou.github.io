@@ -16,7 +16,8 @@ export const solidityPortfolio = [
   {
     id: 3,
     title: 'Consensys Project (developing)',
-    img: 'https://cdn.consensys.net/uploads/featured-image-consensys-lockup.png',
+    img:
+      'https://cdn.consensys.net/uploads/featured-image-consensys-lockup.png',
   },
 ]
 
@@ -25,7 +26,7 @@ export const reactPortfolio = [
     id: 1,
     title: 'chenkuochou.github.io Website',
     img: 'https://i.imgur.com/KSzV4bK.png',
-    url: 'https://chenkuochou.github.io/',
+    url: 'https://github.com/chenkuochou/chenkuochou.github.io/tree/Main',
   },
   {
     id: 2,
