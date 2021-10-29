@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import '../../global.scss';
 
 .portfolio {
   background-color: white;
@@ -7,20 +7,25 @@
   align-items: center;
 
   h1 {
-    font-size: 50px;
+    font-size: 90px;
+    margin: 50px;
 
-    @include mobile{
+    @include mobile {
       font-size: 20px;
     }
   }
 
   ul {
-    margin: 10px;
+    margin: 100px 10px 10px 20px;
     padding: 0;
     list-style: none;
     display: flex;
 
-    @include mobile{
+    li {
+      font-size: 120%;
+    }
+
+    @include mobile {
       margin: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
@@ -34,13 +39,13 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
 
     .item {
-      width: 220px;
-      height: 150px;
+      width: 400px;
+      height: 300px;
       border-radius: 20px;
       border: 1px solid rgb(240, 239, 239);
       margin: 10px 20px;
@@ -49,10 +54,15 @@
       justify-content: center;
       color: white;
       position: relative;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       cursor: pointer;
+      overflow-x: hidden;
+      overflow-y: hidden;
 
-      @include mobile{
+      .h3 {
+        z-index: 1;
+      }
+      @include mobile {
         width: 130px;
         height: 100px;
       }

@@ -1,61 +1,61 @@
-import { useEffect, useState } from "react";
-import PortfolioList from "../portfolioList/PortfolioList";
-import "./portfolio.scss";
+import { useEffect, useState } from 'react'
+import PortfolioList from '../portfolioList/PortfolioList'
+import './portfolio.scss'
 import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
-} from "../../data";
+  solidityPortfolio,
+  reactPortfolio,
+  dappPortfolio,
+  // designPortfolio,
+  // contentPortfolio,
+} from '../../data'
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
-  const [data, setData] = useState([]);
+  const [selected, setSelected] = useState('featured')
+  const [data, setData] = useState([])
   const list = [
     {
-      id: "featured",
-      title: "Featured",
+      id: 'solidity',
+      title: 'Solidity',
     },
     {
-      id: "web",
-      title: "Web App",
+      id: 'react',
+      title: 'React App',
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: 'dapp',
+      title: 'dapp',
     },
-    {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
-  ];
+    // {
+    //   id: 'design',
+    //   title: 'Design',
+    // },
+    // {
+    //   id: 'content',
+    //   title: 'Content',
+    // },
+  ]
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
-        break;
-      case "web":
-        setData(webPortfolio);
-        break;
-      case "mobile":
-        setData(mobilePortfolio);
-        break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+      case 'solidity':
+        setData(solidityPortfolio)
+        break
+      case 'react':
+        setData(reactPortfolio)
+        break
+      case 'dapp':
+        setData(dappPortfolio)
+        break
+      // case 'design':
+      //   setData(designPortfolio)
+      //   break
+      // case 'content':
+      //   setData(contentPortfolio)
+      //   break
       default:
-        setData(featuredPortfolio);
+        setData(solidityPortfolio)
     }
-  }, [selected]);
+  }, [selected])
 
   return (
     <div className="portfolio" id="portfolio">
@@ -72,15 +72,14 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-          <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
-            <h3>{d.title}</h3>
-          </div>
+          <a href={d.url}>
+            <div className="item">
+              <img src={d.img} alt="" efa/>
+              <h3 href={d.img}>{d.title}</h3>
+            </div>
+          </a>
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -1,13 +1,22 @@
-import { useState } from "react";
-import "./contact.scss";
+import { useState } from 'react'
+import './contact.scss'
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   setMessage(true)
+  // }
+
+  const Mailto = ({ email, subject = '', body = '', children }) => {
+    let params = subject || body ? '?' : ''
+    if (subject) params += `subject=${encodeURIComponent(subject)}`
+    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`
+
+    return <a href={`mailto:${email}${params}`}>{children}</a>
+  }
+
   return (
     <div className="contact" id="contact">
       <div className="left">
@@ -15,13 +24,20 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact.</h2>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Email" />
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
-        </form>
+        </form> */}
+        <Mailto
+          email="contact@chenkuochou.com"
+          subject="Hello from chenkuochou.github.io"
+          body=""
+        >
+          contact@chenkuochou.com
+        </Mailto>{' '}
       </div>
     </div>
-  );
+  )
 }
