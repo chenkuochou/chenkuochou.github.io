@@ -12,7 +12,6 @@ export default function Intro() {
       backSpeed: 60,
       strings: [
         'Blockchain developer',
-        'Data scientist',
         'University lecturer',
       ],
     })
