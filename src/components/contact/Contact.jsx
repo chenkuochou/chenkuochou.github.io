@@ -37,6 +37,7 @@ export default function Contact() {
         >
           contact@chenkuochou.com
         </Mailto>{' '}
+        <a href="https://medium.com/@chenkuochou/chen-chou-project-details-4accf92803fc" target="_blank">Project details</a>
       </div>
     </div>
   )
