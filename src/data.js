@@ -31,8 +31,8 @@ export const reactPortfolio = [
   {
     id: 2,
     title: 'NFT Game Frontend',
-    img: 'https://i.imgur.com/dvcfTTJ.png',
-    url: 'https://nft-game-starter-project.milesnext.repl.co',
+    img: 'https://i.imgur.com/vrB4g3B.png',
+    url: 'https://replit.com/@milesnext/nft-game-starter-project#src/App.js',
   },
 ]
 
@@ -40,8 +40,8 @@ export const dappPortfolio = [
   {
     id: 1,
     title: 'Baseball NFT game',
-    img: 'https://i.imgur.com/vrB4g3B.png',
-    url: 'https://replit.com/@milesnext/nft-game-starter-project#src/App.js',
+    img: 'https://i.imgur.com/dvcfTTJ.png',
+    url: 'https://nft-game-starter-project.milesnext.repl.co',
   },
   {
     id: 2,

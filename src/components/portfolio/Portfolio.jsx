@@ -23,7 +23,7 @@ export default function Portfolio() {
     },
     {
       id: 'dapp',
-      title: 'dapp',
+      title: 'Dapp',
     },
     // {
     //   id: 'design',
@@ -72,7 +72,7 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-          <a href={d.url}>
+          <a href={d.url} target="_blank">
             <div className="item">
               <img src={d.img} alt="" efa/>
               <h3 href={d.img}>{d.title}</h3>
