@@ -13,12 +13,6 @@ export const solidityPortfolio = [
     url:
       'https://github.com/chenkuochou/Questbook/tree/Main/Writing%20code%20in%20Solidity',
   },
-  {
-    id: 3,
-    title: 'Consensys Project (developing)',
-    img:
-      'https://cdn.consensys.net/uploads/featured-image-consensys-lockup.png',
-  },
 ]
 
 export const reactPortfolio = [
